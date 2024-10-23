@@ -20,9 +20,7 @@
     left: 0;
     right: 0;
     max-width: 1920px;
-    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco semi-transparente */
-    backdrop-filter: blur(10px); /* Desfoque do fundo */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background-color: white;
   }
   
   nav {
@@ -126,9 +124,8 @@
     #menu.active {
         display: flex; /* Exibe o menu quando ativado */
         gap: 25px;
-        backdrop-filter: blur(100px); /* Aplica o desfoque ao fundo */
-        background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
-        padding: 10px; /* Adiciona algum espaço ao redor dos itens do menu */
+        background-color:white;
+        padding: 20px; /* Adiciona algum espaço ao redor dos itens do menu */
         z-index: 1000; /* Para ficar acima de outros elementos */
     }
   
@@ -520,8 +517,37 @@ a:hover {
 }
 
 
+/*responsive*/
+
+@media (max-width: 1120px) {
+
+    .project-image img {
+        height: 250px;
+    }
+
+}
 
 
+@media (max-width: 900px) {
+
+    .project-image img {
+        margin-bottom: 50px;
+    }
+.project-content {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 500px) {
+
+    .project-image img {
+        height: 200px;
+    }
+
+}
+
+
+/*responsive*/
 
 
 
