@@ -386,7 +386,21 @@ a:hover {
 
 
 
+/*responsive*/
 
+
+@media (max-width: 500px) {
+
+ 
+    .terminal p {
+        font-size:12px ;
+    }
+
+
+}
+
+
+/*responsive*/
 
 
 
