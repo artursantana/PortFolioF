@@ -19,12 +19,12 @@ const menuItems = {
   const textos = {
     pt: {
       nome: "> Artur Pereira.",
-      descricao: "Um desenvolvedor web ajudando empresas a darem vida às suas ideias com tecnologia, expertise e um pouco de café. <br/> Confira meus",
+      descricao: "Um desenvolvedor web ajudando empresas a darem vida às suas ideias com tecnologia, expertise e um pouco de café. Confira meus",
       projetos: "projetos paralelos"
     },
     en: {
       nome: "> Artur Pereira.",
-      descricao: "A web developer helping companies bring their ideas to life with technology, expertise, and a bit of coffee. <br/>Check out my",
+      descricao: "A web developer helping companies bring their ideas to life with technology, expertise, and a bit of coffee. Check out my",
       projetos: "side projects"
     }
   };
@@ -229,6 +229,67 @@ const experienciaTexts = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const menu = document.getElementById("menu");
+    const toggleSwitch = document.querySelector(".toggle-switch");
+  
+    // Função para mover o toggle-switch
+    function moveToggleSwitch() {
+      if (window.innerWidth < 725) {
+        // Mover para dentro do menu
+        if (!toggleSwitch.parentNode.isEqualNode(menu)) {
+          menu.appendChild(toggleSwitch); // Adiciona o toggle ao menu
+        }
+      } else {
+        // Mover para fora do menu
+        const nav = hamburgerMenu.parentNode; // Pega o elemento pai do hamburgerMenu (nav)
+        if (!toggleSwitch.parentNode.isEqualNode(nav)) {
+          nav.appendChild(toggleSwitch); // Adiciona o toggle de volta ao nav
+        }
+      }
+    }
+  
+    // Executar ao carregar a página
+    moveToggleSwitch();
+  
+    // Executar ao redimensionar a janela
+    window.addEventListener("resize", moveToggleSwitch);
+  
+    hamburgerMenu.addEventListener("click", function() {
+      menu.classList.toggle("active"); // Adiciona ou remove a classe active
+    });
+  });
+  
 
 
 

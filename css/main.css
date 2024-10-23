@@ -45,6 +45,7 @@
   }
   #menu a{
     text-decoration: none;
+    
   }
   
   #menu li {
@@ -64,7 +65,6 @@
   
   .toggle-switch {
       display: flex;
-    margin-left: 20px;
     gap: 5px;
   }
   
@@ -99,6 +99,55 @@
   }
   
 
+
+  /*response menu*/
+
+/* Estilos para o menu hamburguer */
+.hamburger {
+    display: none; /* Ocultar por padrão */
+    font-size: 28px;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  
+  @media (max-width: 725px) {
+    #menu {
+      display: none; /* Oculta o menu normal */
+      flex-direction: column; /* Coloca os itens em coluna */
+      margin: auto;
+      position: absolute; /* Permite que o menu flutue */
+      top: 70px; /* Distância do topo do nav */
+      left: 0;
+      right: 0;
+      z-index: 1000; /* Para ficar acima de outros elementos */
+    }
+  
+    #menu.active {
+        display: flex; /* Exibe o menu quando ativado */
+        gap: 25px;
+        backdrop-filter: blur(100px); /* Aplica o desfoque ao fundo */
+        background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+        padding: 10px; /* Adiciona algum espaço ao redor dos itens do menu */
+        z-index: 1000; /* Para ficar acima de outros elementos */
+    }
+  
+    .hamburger {
+      display: block; /* Exibe o botão hamburguer */
+    }
+    /* Adiciona estilo aos links no menu lateral */
+#menu li {
+    margin: 10px 0; /* Adiciona espaço vertical entre os itens */
+    font-size: 18px; /* Tamanho da fonte dos itens */
+    cursor: pointer;
+  }
+  }
+  
+
+
+
+
+  /*response menu*/
 
 
 
@@ -170,9 +219,10 @@
     border-right: 4px solid;
   }
   
-  p {
+  #descricao {
     font-size: 18px;
     color: var(--text-color);
+    padding: 20px;
   }
   
   .link {
@@ -188,7 +238,7 @@
   /* Animation for typing effect */
   @keyframes typing {
     from { width: 0; }
-    to { width: 35%; }
+    to { width: 462px; }
   }
   
   @keyframes blink {
@@ -200,6 +250,35 @@
     animation: typing 2s steps(25) forwards, blink 0.75s infinite;
   }
 
+
+
+/*responsive*/
+
+
+@media (max-width: 500px) {
+
+    .bigMainName {
+        font-size: 44px;
+        color: var(--primary-color);
+        font-weight: bold;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 4px solid;
+      }
+
+      #descricao {
+        font-size: 12px;
+      }
+
+
+
+
+}
+
+
+/*responsive*/
+  
 
 
 
