@@ -31,21 +31,21 @@ const menuItems = {
   
 const terminalTexts = {
     pt: {
-      curriculo: '><span class="variable"> Artur.currículo <a href="/assets/pdfs/Artur Santana.pdf" target="_blank">"CV-Artur-Pereira.pdf"</a></span>',
+      curriculo: '><span class="variable"> Artur.currículo</span> <span class="value"> <a href="/assets/pdfs/Artur Santana.pdf" target="_blank">"CV-Artur-Pereira.pdf"</a></span>',
       educacao: '><span class="variable"> Artur.educação</span> <span class="value">"Desenvolvimento Web - Tokio School"</span>',
-      experiencia: '><span class="variable"> Artur.experiência: <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
+      experiencia: '><span class="variable"> Artur.experiência</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
       localizacao: '><span class="variable"> Artur.localização</span> <span class="value">"Porto, PT - Portugal"</span>',
       interesses: '><span class="variable"> Artur.interesses</span> <span class="value">"Programação web", "Linguas", "Games", "Marvel"</span>',
-      contato: '><span class="variable"> Artur.contato</span> <span class="value"><a href="mailto:artursantana843@gmail.com">artursantana843@gmail.com</a>, <a href="https://www.linkedin.com" target="_blank"><img src="/assets/imgs/circle-linkedin-512.webp" alt="" width="20">Linkedin</a>, <a href="https://github.com" target="_blank"><img src="/assets/imgs/git.png" alt="" width="20">gitHub</a>, <a href="https://www.instagram.com" target="_blank"><img src="/assets/imgs/insta.png" alt="" width="20">Instagram</a></span>',
+      contato: '><span class="variable"> Artur.contato</span> <span class="value"><a href="mailto:artursantana843@gmail.com">"artursantana843@gmail.com</a>, <a href="https://www.linkedin.com" target="_blank"><img src="/assets/imgs/circle-linkedin-512.webp" alt="" width="20">Linkedin</a>, <a href="https://github.com" target="_blank"><img src="/assets/imgs/git.png" alt="" width="20">gitHub</a>, <a href="https://www.instagram.com" target="_blank"><img src="/assets/imgs/insta.png" alt="" width="20">Instagram"</a></span>',
       stacks: '><span class="variable" > Artur.tecnologias</span> <span class="value">"PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket"</span>'
     },
     en: {
-      curriculo: '><span class="variable"> Artur.resume <a href="/assets/pdfs/Artur Santana.pdf" target="_blank">"CV-Artur-Pereira.pdf"</a></span>',
+      curriculo: '><span class="variable"> Artur.resume </span> <span class="value"><a href="/assets/pdfs/Artur Santana.pdf" target="_blank">"CV-Artur-Pereira.pdf"</a></span>',
       educacao: '><span class="variable"> Artur.education</span> <span class="value">"Web Development - Tokio School"</span>',
-      experiencia: '><span class="variable"> Artur.experience: <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
+      experiencia: '><span class="variable"> Artur.experience</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
       localizacao: '><span class="variable"> Artur.location</span> <span class="value">"Porto, PT - Portugal"</span>',
       interesses: '><span class="variable"> Artur.interests</span> <span class="value">"Web programming", "Languages", "Games", "Marvel"</span>',
-      contato: '><span class="variable"> Artur.contact</span> <span class="value"><a href="mailto:artursantana843@gmail.com">artursantana843@gmail.com</a>, <a href="https://www.linkedin.com" target="_blank"><img src="/assets/imgs/circle-linkedin-512.webp" alt="" width="20">Linkedin</a>, <a href="https://github.com" target="_blank"><img src="/assets/imgs/git.png" alt="" width="20">gitHub</a>, <a href="https://www.instagram.com" target="_blank"><img src="/assets/imgs/insta.png" alt="" width="20">Instagram</a></span>',
+      contato: '><span class="variable"> Artur.contact</span> <span class="value"><a href="mailto:artursantana843@gmail.com">"artursantana843@gmail.com</a>, <a href="https://www.linkedin.com" target="_blank"><img src="/assets/imgs/circle-linkedin-512.webp" alt="" width="20">Linkedin</a>, <a href="https://github.com" target="_blank"><img src="/assets/imgs/git.png" alt="" width="20">gitHub</a>, <a href="https://www.instagram.com" target="_blank"><img src="/assets/imgs/insta.png" alt="" width="20">Instagram"</a></span>',
       stacks: '><span class="variable"> Artur.stacks</span> <span class="value">"PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket"</span>'
     }
   };
