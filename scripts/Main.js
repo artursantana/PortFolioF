@@ -146,89 +146,123 @@ const experienciaTexts = {
   }
   
   // Função para atualizar os textos da página (nome, descrição, itens do menu)
-  function updateText(language) {
-    currentLang = language;
-    
-    // Atualiza o nome com o efeito de digitação
-    nome = textos[language].nome;
-    nomeElement.textContent = ''; // Limpa o texto do nome antes de iniciar o efeito
-    i = 0; // Reinicia a contagem para o efeito de digitação
-    typeWriter();
+  const enButton = document.getElementById('en-button');
+const ptButton = document.getElementById('pt-button');
+
+// Função para atualizar os textos da página (nome, descrição, itens do menu)
+function updateText(language) {
+  currentLang = language;
+
+  // Atualiza o nome com o efeito de digitação
+  nome = textos[language].nome;
+  nomeElement.textContent = ''; // Limpa o texto do nome antes de iniciar o efeito
+  i = 0; // Reinicia a contagem para o efeito de digitação
+  typeWriter();
+
+  // Atualiza a descrição com a nova tradução
+  descricaoElement.innerHTML = textos[language].descricao + ' <a href="#thirt" class="link" id="projetos">' + textos[language].projetos + '</a> abaixo.';
+
+  // Atualiza os itens do menu
+  inicio.textContent = menuItems[language].inicio;
+  sobre.textContent = menuItems[language].sobre;
+  projetos.textContent = menuItems[language].projetos;
+  experiencia.textContent = menuItems[language].experiencia;
+  contato.textContent = menuItems[language].contato;
+
+  const terminalDiv = document.querySelector('.terminal');
+  terminalDiv.innerHTML = `
+    <p>${terminalTexts[language].curriculo}</p>
+    <p>${terminalTexts[language].educacao}</p>
+    <p>${terminalTexts[language].experiencia}</p>
+    <p>${terminalTexts[language].localizacao}</p>
+    <p>${terminalTexts[language].interesses}</p>
+    <p>${terminalTexts[language].contato}</p>
+    <p>${terminalTexts[language].stacks}</p>
+  `;
+
+  // Atualiza a seção de experiência
+  const taskSection = experienciaTexts[language].task;
+  const wakkeSection = experienciaTexts[language].wakke;
+
+  // Atualiza a experiência da Task4iT
+  const taskInfoDiv = document.getElementById('task');
+  taskInfoDiv.innerHTML = `
+    <h3>${taskSection.title}<span class="date">${taskSection.date}</span></h3>
+    <p>${taskSection.company}</p>
+    <p>${taskSection.description}</p>
+    <p>${taskSection.experience}</p>
+    <p>${taskSection.skillsTitle}</p>
+    <ul>
+      ${taskSection.skills.map(skill => `<li>${skill}</li>`).join('')}
+    </ul>
+  `;
+
+  // Atualiza a experiência da Critérios
+  const wakkeInfoDiv = document.getElementById('wakke');
+  wakkeInfoDiv.innerHTML = `
+    <h3>${wakkeSection.title}<span class="date">${wakkeSection.date}</span></h3>
+    <p>${wakkeSection.company}</p>
+    <p>${wakkeSection.description}</p>
+    <p>${wakkeSection.skillsTitle}</p>
+    <ul>
+      ${wakkeSection.skills.map(skill => `<li>${skill}</li>`).join('')}
+    </ul>
+  `;
+}
+
+// Listener para os botões de idioma
+enButton.addEventListener('click', () => {
+  updateText('en'); // Muda para inglês ao clicar em "EN"
+});
+
+ptButton.addEventListener('click', () => {
+  updateText('pt'); // Muda para português ao clicar em "PT"
+});
   
-    // Atualiza a descrição com a nova tradução
-    descricaoElement.innerHTML = textos[language].descricao + ' <a href="#thirt" class="link" id="projetos">' + textos[language].projetos + '</a> abaixo.';
+
   
-    // Atualiza os itens do menu
-    inicio.textContent = menuItems[language].inicio;
-    sobre.textContent = menuItems[language].sobre;
-    projetos.textContent = menuItems[language].projetos;
-    experiencia.textContent = menuItems[language].experiencia;
-    contato.textContent = menuItems[language].contato;
 
 
 
 
 
-    const terminalDiv = document.querySelector('.terminal');
-    terminalDiv.innerHTML = `
-      <p>${terminalTexts[language].curriculo}</p>
-      <p>${terminalTexts[language].educacao}</p>
-      <p>${terminalTexts[language].experiencia}</p>
-      <p>${terminalTexts[language].localizacao}</p>
-      <p>${terminalTexts[language].interesses}</p>
-      <p>${terminalTexts[language].contato}</p>
-      <p>${terminalTexts[language].stacks}</p>
-    `;
-
-
-    // Atualiza a seção de experiência
-    const taskSection = experienciaTexts[language].task;
-    const wakkeSection = experienciaTexts[language].wakke;
-
-    // Atualiza a experiência da Task4iT
-    const taskInfoDiv = document.getElementById('task');
-    taskInfoDiv.innerHTML = `
-      <h3>${taskSection.title}<span class="date">${taskSection.date}</span></h3>
-      <p>${taskSection.company}</p>
-      <p>${taskSection.description}</p>
-      <p>${taskSection.experience}</p>
-      <p>${taskSection.skillsTitle}</p>
-      <ul>
-        ${taskSection.skills.map(skill => `<li>${skill}</li>`).join('')}
-      </ul>
-    `;
-
-    // Atualiza a experiência da Critérios
-    const wakkeInfoDiv = document.getElementById('wakke');
-    wakkeInfoDiv.innerHTML = `
-      <h3>${wakkeSection.title}<span class="date">${wakkeSection.date}</span></h3>
-      <p>${wakkeSection.company}</p>
-      <p>${wakkeSection.description}</p>
-      <p>${wakkeSection.skillsTitle}</p>
-      <ul>
-        ${wakkeSection.skills.map(skill => `<li>${skill}</li>`).join('')}
-      </ul>
-    `;
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const themeToggle = document.getElementById('theme-toggle');
+
+// Carregar tema do localStorage
+if (localStorage.getItem('dark-mode') === 'true') {
+  document.body.classList.add('dark-theme');
+  themeToggle.checked = true;
+}
+
+// Alternar tema ao clicar no checkbox
+themeToggle.addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('dark-mode', 'true'); // Salvar no localStorage
+  } else {
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('dark-mode', 'false'); // Salvar no localStorage
   }
-  
-  // Listener para o toggle de idioma (checkbox)
-  toggle.addEventListener('change', () => {
-    if (toggle.checked) {
-      updateText('en'); // Muda para inglês se o toggle estiver ativado
-    } else {
-      updateText('pt'); // Muda para português se o toggle estiver desativado
-    }
-  });
-  
-
-  
-
-
-
+});
 
 
 

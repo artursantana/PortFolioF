@@ -11,6 +11,15 @@
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color);
   }
+
+  body.dark-theme {
+    --primary-color: #a653e2; /* Azul mais escuro */
+    --background-color: #222222; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --neutral-color: #555555; /* Cinza escuro */
+}
+
+  
   
   header {
     margin: auto;
@@ -20,7 +29,8 @@
     left: 0;
     right: 0;
     max-width: 1920px;
-    background-color: white;
+    background-color: #FFFFFF;
+   
   }
   
   nav {
@@ -55,7 +65,7 @@
   #menu li {
     margin-right: 20px;
     font-size: 18px;
-    color: var(--text-color);
+    color:#333333 ;
     cursor: pointer;
   }
   
@@ -67,26 +77,28 @@
     color: var(--primary-color);
   }
   
-  .toggle-switch {
-      display: flex;
+
+  /* Estilos para o toggle-switch */
+.toggle-switch {
+    display: flex;
     gap: 5px;
-  }
-  
-  .toggle-switch input[type="checkbox"] {
+}
+
+.toggle-switch input[type="checkbox"] {
     display: none;
-  }
-  
-  .toggle-switch label {
+}
+
+.toggle-switch label {
     width: 40px;
     height: 20px;
-    background-color: var(--text-color);
+    background-color: #333333;
     display: block;
     border-radius: 20px;
     position: relative;
     cursor: pointer;
-  }
-  
-  .toggle-switch label::after {
+}
+
+.toggle-switch label::after {
     content: '';
     width: 16px;
     height: 16px;
@@ -96,12 +108,20 @@
     top: 2px;
     left: 2px;
     transition: 0.3s;
-  }
-  
-  .toggle-switch input:checked + label::after {
+}
+
+.toggle-switch input:checked + label::after {
     left: 22px;
-  }
-  
+}
+
+/* Quando o tema escuro estiver ativo */
+input[type="checkbox"]:checked ~ body {
+    --primary-color: #1e90ff; /* Azul mais escuro */
+    --background-color: #222222; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --neutral-color: #555555; /* Cinza escuro */
+}
+
 
 
   /*response menu*/
@@ -366,11 +386,11 @@
 }
 
 .value {
-    color:var(--neutral-color);
+    color:#d3d3d3;
 }
 
 .value a {
-    color:var(--neutral-color);
+    color:#d3d3d3;
     text-decoration: none;
     text-decoration: underline;
 }
