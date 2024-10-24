@@ -17,6 +17,7 @@
     --background-color: #222222; /* Fundo escuro */
     --text-color: #ffffff; /* Texto branco */
     --neutral-color: #555555; /* Cinza escuro */
+    --black-inblack: #bdb2b2;
 }
 
   
@@ -510,8 +511,8 @@ a:hover {
 }
 
 .tags span {
-    background-color: #23252a;
-    color: var(--background-color);
+    background-color: var(--text-color);
+    color: var(--neutral-color);
     border-radius: 4px;
     padding: 5px 10px;
     margin-right: 10px;
@@ -674,6 +675,7 @@ a:hover {
 
 .company h3 {
     font-size: 1.5rem;
+    color: var(--black-inblack);
     
 }
 
@@ -704,11 +706,11 @@ ul {
 
 
 ul span{
-    color: #000;
+    color: var(--black-inblack);
     text-transform: uppercase;
 }
 .colorspan{
-    color: #000;
+    color: var(--black-inblack);
 }
 
 /*responsive*/
