@@ -257,11 +257,11 @@ const experienciaTexts = {
 
 
 // script.js
-
 document.addEventListener("DOMContentLoaded", function() {
     const hamburgerMenu = document.getElementById("hamburger-menu");
     const menu = document.getElementById("menu");
     const toggleSwitch = document.querySelector(".toggle-switch");
+    const menuLinks = document.querySelectorAll("#menu a"); // Seleciona todos os links do menu
   
     // Função para mover o toggle-switch
     function moveToggleSwitch() {
@@ -285,10 +285,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Executar ao redimensionar a janela
     window.addEventListener("resize", moveToggleSwitch);
   
+    // Alternar o menu ao clicar no botão hamburguer
     hamburgerMenu.addEventListener("click", function() {
       menu.classList.toggle("active"); // Adiciona ou remove a classe active
     });
-  });
+  
+    // Recolher o menu ao clicar em qualquer item
+    menuLinks.forEach(function(link) {
+      link.addEventListener("click", function() {
+        menu.classList.remove("active"); // Recolhe o menu removendo a classe active
+      });
+    });
+});
+
   
 
 
@@ -342,6 +351,57 @@ window.onload = function() {
     typeWriter()
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Mensagem enviada com sucesso!');
+});
 
 
 
