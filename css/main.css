@@ -18,6 +18,7 @@
     --text-color: #ffffff; /* Texto branco */
     --neutral-color: #555555; /* Cinza escuro */
     --black-inblack: #bdb2b2;
+    --intro-back: #3e4044;
 }
 
   
@@ -43,11 +44,12 @@
   
   .logo h1 {
     font-size: 44px;
-    color: var(--primary-color);
+    
     text-decoration: none;
   }
   .logo h1 a{
     text-decoration: none;
+    color: var(--primary-color);
   }
   
   
@@ -178,6 +180,15 @@ input[type="checkbox"]:checked ~ body {
 
 
 
+  .toggle-switch button{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .tagsLanguage {
+    margin-right: 25px;
+  }
 
 
 
@@ -229,7 +240,7 @@ input[type="checkbox"]:checked ~ body {
     margin-top: 20%;
     max-width: 1920px;
     margin: auto;
-    height: 60vh;
+    height: 100vh;
   }
   
 .bigMainName {
@@ -258,6 +269,29 @@ input[type="checkbox"]:checked ~ body {
   .link:hover {
     text-decoration: underline;
   }
+.redesSocials{
+    width: 100%;
+   
+}
+  
+  .redesSocials .redesSocials-value{
+    display: flex;
+    justify-content: space-around;
+ 
+    
+  }
+  .redesSocials a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  .redesSocials a img{
+   width: 40px;
+  }
   
   /* Animation for typing effect */
   @keyframes typing {
@@ -278,6 +312,36 @@ input[type="checkbox"]:checked ~ body {
 
 /*responsive*/
 
+@media (min-width: 1100px) {
+    .redesSocials{
+        width: 80%;
+       
+    }
+    
+
+}
+@media (max-width: 750px) {
+
+      .corrigeSize{
+        width: 100px;
+      }
+
+}
+@media (max-width: 800px) {
+
+    .redesSocials a {
+        font-size: 12px;
+      }
+      .redesSocials a img{
+       width: 30px;
+      }
+
+      .corrigeSize{
+        width: 100px;
+      }
+
+}
+
 
 @media (max-width: 500px) {
 
@@ -296,6 +360,17 @@ input[type="checkbox"]:checked ~ body {
       }
 
 
+      .redesSocials a {
+        font-size: 10px;
+      }
+      .redesSocials a img{
+       width: 20px;
+      }
+
+
+      .corrigeSize{
+        margin-left: 20px;
+      }
 
 
 }
@@ -368,7 +443,7 @@ input[type="checkbox"]:checked ~ body {
 
 
   .terminal {
-    background-color: #23252a;
+    background-color: var( --intro-back);
     border-radius: 8px;
     padding: 20px;
     width: 80%;
@@ -767,79 +842,11 @@ ul span{
 
 
 
-
-
-
-.container {
+footer{
     display: flex;
-    margin: auto;
-    justify-content: space-between;
-    max-width: 1920px;
-    padding: 20px;
-
-}
-
-.form-container {
-    width: 60%;
-    margin: auto;
-    text-align: center;
-}
-
-.form-container h1 {
-    margin: 50px 0px 0px 0px;
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-container input, textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    outline: none;
-    resize: none;
-}
-
-.form-container button {
-    padding: 10px;
-    font-size: 1.1rem;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.form-container button:hover {
-    background-color: var(--primary-color);
-}
-
-p {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 900px) {
-    .form-container {
-        width: 80%;
-        margin: auto;
-        text-align: center;
-    }
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0px 50px 0px ;
+    color: var(--text-color);
+    font-weight: 600;
 }
