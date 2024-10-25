@@ -28,6 +28,17 @@ const menuItems = {
       projetos: "side projects"
     }
   };
+
+  const titleTextos = {
+    pt: {
+      titlePro: "&lt;Projetos /&gt;",
+      titleExp: "&lt;Experiência /&gt;"
+    },
+    en: {
+      titlePro: "&lt;Projects /&gt;",
+      titleExp: "&lt;Experience /&gt;"
+    }
+  };
   
 const terminalTexts = {
     pt: {
@@ -185,6 +196,24 @@ function updateText(language) {
     <p>${terminalTexts[language].interesses}</p>
     <p>${terminalTexts[language].stacks}</p>
   `;
+
+
+  const TitleChangeLanguagePro = document.querySelector('#language-projects');
+  const TitleChangeLanguageExp = document.querySelector('#language-experience');
+  
+  // Atualiza o conteúdo dos elementos com base no idioma
+  TitleChangeLanguagePro.innerHTML = titleTextos[language].titlePro;
+  TitleChangeLanguageExp.innerHTML = titleTextos[language].titleExp;
+
+
+
+
+
+
+
+
+
+
 
   // Atualiza a seção de experiência
   const taskSection = experienciaTexts[language].task;
