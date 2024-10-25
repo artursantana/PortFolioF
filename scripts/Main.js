@@ -43,28 +43,36 @@ const menuItems = {
 const terminalTexts = {
     pt: {
       
-      educacao: '><span class="variable"> Artur.educação</span> <span class="value">"Desenvolvimento Web - Tokio School"</span>',
+      name: ' <p><span class="variableDifere">const <span class="value">Artur</span> = {</span></p>',
 
-      experiencia: '><span class="variable"> Artur.experiência</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
+      educacao: '<span class="variable"> educação:</span> <span class="value">[ "Desenvolvimento Web - Tokio School" ]</span>',
 
-      localizacao: '><span class="variable"> Artur.localização</span> <span class="value">"Porto, PT - Portugal"</span>',
+      experiencia: '<span class="variable"> experiência:</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">[ "Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios" ]</a></span>',
 
-      interesses: '><span class="variable"> Artur.interesses</span> <span class="value">"Programação web", "Linguas", "Games", "Marvel"</span>',
+      localizacao: '<span class="variable"> localização:</span> <span class="value">[ "Porto, PT - Portugal" ]</span>',
+
+      interesses: '<span class="variable"> interesses:</span> <span class="value">[ "Programação web", "Linguas", "Games", "Marvel" ]</span>',
       
-      stacks: '><span class="variable" > Artur.tecnologias</span> <span class="value">"PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket"</span>'
+      stacks: '<span class="variable" > tecnologias:</span> <span class="value">[ "PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket" ]</span>',
+
+      footer: '<p><span class="variableDifere">};</span></p>'
     },
 
     en: {
+
+      name: ' <p><span class="variableDifere">const <span class="value">Artur</span> = {</span></p>',
       
-      educacao: '><span class="variable"> Artur.education</span> <span class="value">"Web Development - Tokio School"</span>',
+      educacao: '<span class="variable"> education:</span> <span class="value">[ "Web Development - Tokio School" ]</span>',
 
-      experiencia: '><span class="variable"> Artur.experience</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
+      experiencia: '<span class="variable"> experience:</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">[ "Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios" ]</a></span>',
 
-      localizacao: '><span class="variable"> Artur.location</span> <span class="value">"Porto, PT - Portugal"</span>',
+      localizacao: '<span class="variable"> location:</span> <span class="value">[ "Porto, PT - Portugal" ]</span>',
 
-      interesses: '><span class="variable"> Artur.interests</span> <span class="value">"Web programming", "Languages", "Games", "Marvel"</span>',
+      interesses: '<span class="variable"> interests:</span> <span class="value">[ "Web programming", "Languages", "Games", "Marvel" ]</span>',
 
-      stacks: '><span class="variable"> Artur.stacks</span> <span class="value">"PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket"</span>'
+      stacks: '<span class="variable"> stacks:</span> <span class="value">[ "PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket" ]</span>',
+
+      footer: '<p><span class="variableDifere">};</span></p>'
     }
   };
   
@@ -189,11 +197,13 @@ function updateText(language) {
 
   const terminalDiv = document.querySelector('.terminal');
   terminalDiv.innerHTML = `
+  <p>${terminalTexts[language].name}</p>
+  <p>${terminalTexts[language].experiencia}</p>
+  <p>${terminalTexts[language].stacks}</p>
     <p>${terminalTexts[language].educacao}</p>
-    <p>${terminalTexts[language].experiencia}</p>
-    <p>${terminalTexts[language].localizacao}</p>
     <p>${terminalTexts[language].interesses}</p>
-    <p>${terminalTexts[language].stacks}</p>
+    <p>${terminalTexts[language].localizacao}</p>
+    <p>${terminalTexts[language].footer}</p>
   `;
 
 
