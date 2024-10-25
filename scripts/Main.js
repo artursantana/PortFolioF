@@ -51,7 +51,7 @@ const terminalTexts = {
 
       localizacao: '<span class="variable"> localização:</span> <span class="value">[ "Porto, PT - Portugal" ]</span>',
 
-      interesses: '<span class="variable"> interesses:</span> <span class="value">[ "Programação web", "Linguas", "Games", "Marvel" ]</span>',
+      interesses: '<span class="variable"> interesses:</span> <span class="value">[ "Programação web", "Linguas", "Estudar", "Games" ]</span>',
       
       stacks: '<span class="variable" > tecnologias:</span> <span class="value">[ "PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket" ]</span>',
 
@@ -68,7 +68,7 @@ const terminalTexts = {
 
       localizacao: '<span class="variable"> location:</span> <span class="value">[ "Porto, PT - Portugal" ]</span>',
 
-      interesses: '<span class="variable"> interests:</span> <span class="value">[ "Web programming", "Languages", "Games", "Marvel" ]</span>',
+      interesses: '<span class="variable"> interests:</span> <span class="value">[ "Web programming", "Languages", "To study", "Games" ]</span>',
 
       stacks: '<span class="variable"> stacks:</span> <span class="value">[ "PHP", "JavaScript", "Typescript" "HTML", "CSS", "React.js", "Wordpress", "Elementor Pro", "Next.js", "Node.js", "MYsql", "Style-Components", "Emotion.js", "Tailwind", "Bootstrap", "GitHub", "Bitbucket" ]</span>',
 
