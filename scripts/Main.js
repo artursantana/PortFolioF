@@ -19,13 +19,13 @@ const menuItems = {
   const textos = {
     pt: {
       nome: "> Artur Pereira.",
-      descricao: "Um desenvolvedor web ajudando empresas a darem vida às suas ideias com tecnologia, expertise e um pouco de café. Confira meus",
-      projetos: "projetos paralelos"
+      descricao: " Desenvolvedor Web com foco em criar interfaces modernas e funcionais. Gosto de transformar ideias em experiências digitais intuitivas. Confira meus",
+      projetos: "Projetos"
     },
     en: {
       nome: "> Artur Pereira.",
-      descricao: "A web developer helping companies bring their ideas to life with technology, expertise, and a bit of coffee. Check out my",
-      projetos: "side projects"
+      descricao: "Web developer focused on creating modern and functional interfaces. I like to transform ideas into intuitive digital experiences. Check out my",
+      projetos: "Projects"
     }
   };
 
@@ -42,7 +42,7 @@ const menuItems = {
   
 const terminalTexts = {
     pt: {
-      curriculo: '><span class="variable"> Artur.currículo</span> <span class="value"> <a href="/assets/pdfs/Artur Santana.pdf" target="_blank">"CV-Artur-Pereira.pdf"</a></span>',
+      
       educacao: '><span class="variable"> Artur.educação</span> <span class="value">"Desenvolvimento Web - Tokio School"</span>',
 
       experiencia: '><span class="variable"> Artur.experiência</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',
@@ -55,8 +55,7 @@ const terminalTexts = {
     },
 
     en: {
-      curriculo: '><span class="variable"> Artur.resume </span> <span class="value"><a href="/assets/pdfs/Artur Santana.pdf" target="_blank">"CV-Artur-Pereira.pdf"</a></span>',
-
+      
       educacao: '><span class="variable"> Artur.education</span> <span class="value">"Web Development - Tokio School"</span>',
 
       experiencia: '><span class="variable"> Artur.experience</span> <span class="value"> <a href="https://task4it.pt/" target="_blank">"Task4iT"</a>, <a href="https://criterios.pt/" target="_blank">"Critérios"</a></span>',

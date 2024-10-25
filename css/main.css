@@ -458,7 +458,13 @@ input[type="checkbox"]:checked ~ body {
 }
 
 .variable {
+    color: #ffd88e ;
+}
+.variableDifere{
     color: var(--primary-color);
+}
+.variableDifere1{
+    color: #ffc963;
 }
 
 .value {
